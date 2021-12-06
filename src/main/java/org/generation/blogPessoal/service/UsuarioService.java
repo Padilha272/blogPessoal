@@ -93,8 +93,8 @@ public class UsuarioService {
 
 				usuarioLogin.get().setToken(generatorBasicToken(usuarioLogin.get().getUsuario(), usuarioLogin.get().getSenha()));
 
-
-
+				usuarioLogin.get().setTipo(usuario.get().getTipo());
+				
 				return usuarioLogin;
 
 			}

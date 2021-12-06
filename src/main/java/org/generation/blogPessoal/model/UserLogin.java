@@ -3,14 +3,28 @@ package org.generation.blogPessoal.model;
 public class UserLogin {
 
 	private Long id;
+	
 	private String nome;
 	
 	private String usuario;
+	
 	private String foto;
+	
+	private String tipo;
 	
 	private String senha;
 	
 	private String token;
+	
+	
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 
 	public Long getId() {
 		return id;

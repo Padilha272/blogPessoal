@@ -1,6 +1,7 @@
 package org.generation.blogPessoal.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -46,7 +47,29 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 	
-	public String foto;
+	private String foto;
+	
+	private String tipo;
+	
+	
+	
+
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 
 	// Primeiro método Construtor - Com os atributos
 	public Usuario(long id, String nome, String usuario, String senha, LocalDate dataNascimento) {
@@ -109,13 +132,7 @@ public class Usuario {
 		this.postagem = postagem;
 	}
 
-	public String getFoto() {
-		return foto;
-	}
-
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
+	
 
 	
 }
