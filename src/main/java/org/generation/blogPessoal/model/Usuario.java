@@ -45,6 +45,8 @@ public class Usuario {
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
+	
+	public String foto;
 
 	// Primeiro método Construtor - Com os atributos
 	public Usuario(long id, String nome, String usuario, String senha, LocalDate dataNascimento) {
@@ -108,7 +110,12 @@ public class Usuario {
 	}
 
 	public String getFoto() {
-		// TODO Auto-generated method stub
-		return null;
+		return foto;
 	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	
 }
