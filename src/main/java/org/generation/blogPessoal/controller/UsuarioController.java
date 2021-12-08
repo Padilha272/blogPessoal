@@ -78,9 +78,9 @@ public class UsuarioController {
 	
 	
 	@PostMapping("/logar")
-	public ResponseEntity<Postagem> Autentication(@RequestBody Optional<UserLogin> user) {
+	public ResponseEntity<UserLogin> Autentication(@RequestBody Optional<UserLogin> user) {
 
-		return service.Logar(user).map(resp -> ResponseEntity.ok(resp))
+		return service.logarUsuario(user).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 	}
 
